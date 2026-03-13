@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header, footer{
+    display: flex;
+    background-color: rgb(240, 120, 120);
+    justify-content: space-between;
+    width: 100%;
+}
+
+main {
+    width: 100vw;
+}
+
+nav {
+    display: flex;
+}
+
+.padded {
+    display: flex;
+    padding: 1em;
+    align-items: flex-start;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons form {
+    padding: 1px;
+}
+
+.photo, .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultsGrid {
+    display: grid; /* sets the display type to a grid */
+    grid-template-columns: repeat(4, 1fr); /* sets the format of the grid, 1fr repeats 4 times*/
+    gap: 16px; /* sets gap between images to 16px */
+    margin: 20px; /* sets outer margin of grid to 20px */ 
+    grid-auto-rows: auto; /* sets height of rows to auto */
+    min-height: 40vh; /* minimum height is 40% of view height */
+    max-height: 80vh; /* maximum height is 80% of view height */
+    height: auto; /* sets height of grid to auto*/
+    overflow-y: auto; /* if height is over max-height, then adds a scroll bar */
+}
+
+.resultsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px; 
+    grid-auto-rows: auto;
+    min-height: 40vh;
+    height: auto;
+    overflow-y: auto;
+    max-height: 80vh;    
+}
+
+.results figure {
+    text-align: center;
+}
+
+.results img {
+    width: 100%; 
+    height: auto;
+}
+
+.anav {
+    padding: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.flagged {
+    opacity: 0.5;
+    border: 2px solid red;
+}
+
+@media screen and (max-width: 768px) {
+    #info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-y: auto;
+        height: auto;
+        padding: 1em;
+        max-height: 80vh;
+    }
+}
